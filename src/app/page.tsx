@@ -9,8 +9,8 @@ import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 
 export default async function Home() {
-  const template = await fetchTemplate(1); // Estructura base de la plantilla
-  const content = await fetchContent(1);  // Contenido dinámico
+  const template = await fetchTemplate(1); 
+  const content = await fetchContent(1);  
 
   return (
     <div className="min-h-screen flex flex-col">
