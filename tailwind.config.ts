@@ -13,7 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-          sans: ["var(--font-montserrat)", "sans-serif"],
+          // sans: ["var(--font-montserrat)", "sans-serif"],
+          montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
     },
   },

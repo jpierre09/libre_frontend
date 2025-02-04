@@ -25,40 +25,40 @@ export default function Header({ content }: HeaderProps) {
 
   return (
     <header
-      className={`w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300 
-        ${isScrolled ? "bg-gray-900 bg-opacity-70" : "bg-gray-900 bg-opacity-30 backdrop-blur-md"}
-`}
+      className={`w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300 font-montserrat
+        ${isScrolled ? "bg-gray-900 bg-opacity-80" : "bg-gray-900 bg-opacity-30 backdrop-blur-lg"}
+      `}
     >
-      <div className="w-full px-4 sm:px-8 flex items-center justify-between py-4 relative">
+      <div className="w-full px-4 sm:px-8 flex items-center justify-between py-2 sm:py-3 relative">
         {/* Botón de menú en móviles */}
         <button className="block sm:hidden z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X className="text-white w-6 h-6" /> : <Menu className="text-white w-6 h-6" />}
+          {isMenuOpen ? <X className="text-white w-5 h-5" /> : <Menu className="text-white w-5 h-5" />}
         </button>
 
-        {/* Navegación izquierda (visible en pantallas grandes) */}
-        <div className="hidden sm:flex">
-          <Navigation items={navigationLeft} alignment="start" />
+        {/* Navegación izquierda */}
+        <div className="hidden sm:flex gap-6">
+          <Navigation items={navigationLeft} alignment="start" className="text-sm sm:text-base font-medium" />
         </div>
 
-        {/* Logo centrado absoluto */}
-        <h1 className="absolute left-1/2 transform -translate-x-1/2 text-3xl font-bold tracking-wider hover:scale-110 transition-all duration-300 cursor-pointer">
-          <a href="/" aria-label="Volver a la página principal">{logo}</a>
+        {/* Logo centrado */}
+        <h1 className="absolute left-1/2 transform -translate-x-1/2 text-2xl sm:text-3xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
+          <a href="/" className="uppercase">{logo}</a>
         </h1>
 
-        {/* Navegación derecha (visible en pantallas grandes) */}
-        <div className="hidden sm:flex">
-          <Navigation items={navigationRight} alignment="end" />
+        {/* Navegación derecha */}
+        <div className="hidden sm:flex gap-6">
+          <Navigation items={navigationRight} alignment="end" className="text-sm sm:text-base font-medium" />
         </div>
       </div>
 
       {/* Menú desplegable en móviles */}
       {isMenuOpen && (
-        <div className="sm:hidden flex flex-col items-center bg-gray-900 py-4">
+        <div className="sm:hidden flex flex-col items-center bg-gray-900 py-3 gap-4">
           {[...navigationLeft, ...navigationRight].map((item, index) => (
             <a
               key={index}
               href={`/${item.toLowerCase()}`}
-              className="text-lg font-medium hover:text-gray-300 transition-all duration-300 py-2"
+              className="text-sm font-medium hover:text-gray-300 transition-all duration-300 py-2"
               aria-label={`Ir a la sección de ${item}`}
               onClick={() => setIsMenuOpen(false)}
             >
