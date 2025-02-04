@@ -29,7 +29,11 @@ export default function Header({ content }: HeaderProps) {
         ${isScrolled ? "bg-gray-900 bg-opacity-80" : "bg-gray-900 bg-opacity-30 backdrop-blur-lg"}
       `}
     >
-      <div className="w-full px-4 sm:px-8 flex items-center justify-between py-2 sm:py-3 relative">
+      {/* <div className="w-full px-4 sm:px-8 flex items-center justify-between py-2 sm:py-3 relative"> */}
+      <div className="w-full px-4 sm:px-8 flex items-center justify-between py-4 sm:py-6 relative">
+
+
+
         {/* Botón de menú en móviles */}
         <button className="block sm:hidden z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <X className="text-white w-5 h-5" /> : <Menu className="text-white w-5 h-5" />}
@@ -41,9 +45,13 @@ export default function Header({ content }: HeaderProps) {
         </div>
 
         {/* Logo centrado */}
-        <h1 className="absolute left-1/2 transform -translate-x-1/2 text-2xl sm:text-3xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
+        {/* <h1 className="absolute left-1/2 transform -translate-x-1/2 text-2xl sm:text-3xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
+          <a href="/" className="uppercase">{logo}</a>
+        </h1> */}
+        <h1 className="absolute left-1/2 transform -translate-x-1/2 text-3xl sm:text-4xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
           <a href="/" className="uppercase">{logo}</a>
         </h1>
+
 
         {/* Navegación derecha */}
         <div className="hidden sm:flex gap-6">
