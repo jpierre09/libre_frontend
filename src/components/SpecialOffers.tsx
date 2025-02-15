@@ -39,18 +39,18 @@ export default function SpecialOffers() {
   ];
 
   return (
-    <section className="w-full h-[60vh] sm:h-[70vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-white">
+    <section className="w-full h-[60vh] sm:h-[50vh] flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-white">
       {/* Título y Cuenta regresiva */}
       <div className="text-center mb-10">
         <h2 className="text-3xl sm:text-4xl font-semibold uppercase tracking-wide text-gray-900">
           Oferta especial pa Vos
         </h2>
-        <p className="text-gray-600 text-lg mt-2">Hasta 30% off</p>
-        <div className="flex justify-center space-x-4 mt-4 text-xl font-medium text-gray-800">
+        {/* <p className="text-gray-600 text-lg mt-2">Hasta 30% off</p> */}
+        {/* <div className="flex justify-center space-x-4 mt-4 text-xl font-medium text-gray-800">
           <div className="px-4 py-2 border border-gray-400 rounded-md">{timeLeft.hours}h</div>
           <div className="px-4 py-2 border border-gray-400 rounded-md">{timeLeft.minutes}m</div>
           <div className="px-4 py-2 border border-gray-400 rounded-md">{timeLeft.seconds}s</div>
-        </div>
+        </div> */}
       </div>
 
       {/* Grid de productos */}

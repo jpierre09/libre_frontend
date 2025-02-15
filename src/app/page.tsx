@@ -23,7 +23,7 @@ export default async function Home() {
       <SpecialOffers content={content.special_offers} />
       <About content={content.about} />
       <Contact content={content.contact} />
-      <Subscribe content={content.subscribe} />
+      {/* <Subscribe content={content.subscribe} /> */}
       <Footer content={content.footer} />
     </div>
   );

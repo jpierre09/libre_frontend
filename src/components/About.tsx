@@ -5,7 +5,7 @@ import { Users } from "lucide-react"; // Icono representativo
 
 export default function About() {
   return (
-    <section className="w-full h-[60vh] sm:h-[70vh] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
+    <section className="w-full h-[60vh] sm:h-[80vh] flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300">
       <div className="max-w-4xl flex flex-col sm:flex-row items-center gap-6 sm:gap-12 text-center sm:text-left">
         {/* Imagen o icono temporal */}
         <motion.div

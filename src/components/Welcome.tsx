@@ -1,7 +1,7 @@
 export default function Welcome({ content }: { content: { text: string; image: string } }) {
   return (
     <section
-      className="w-full h-[60vh] sm:h-[70vh] flex items-center justify-center bg-cover bg-center relative"
+      className="w-full h-[60vh] sm:h-[90vh] flex items-center justify-center bg-cover bg-center relative"
       style={{ backgroundImage: `url(${content.image})` }}
     >
       {/* Capa oscura para mejorar visibilidad del texto */}

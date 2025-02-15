@@ -12,7 +12,7 @@ export default function Categories() {
 
   const categories = [
     { name: "🆕 Recién Llegados", type: "carousel", size: "col-span-2 row-span-1" },
-    { name: "👜 Accesorios", size: "col-span-1 row-span-1", color: "bg-gradient-to-br from-red-200 to-red-400" },
+    { name: "👜 Cosas", size: "col-span-1 row-span-1", color: "bg-gradient-to-br from-red-200 to-red-400" },
     { name: "👕 Hombre", size: "col-span-1 row-span-1", color: "bg-gradient-to-br from-blue-200 to-blue-400" },
     { name: "👗 Mujer", size: "col-span-1 row-span-1", color: "bg-gradient-to-br from-green-200 to-green-400" },
     { name: "🎨 Colecciones", size: "col-span-1 row-span-1", color: "bg-gradient-to-br from-purple-200 to-purple-400" },
@@ -22,7 +22,7 @@ export default function Categories() {
   const recentArrivals = ["🔥", "🛍️", "⭐", "💎", "🚀"];
 
   return (
-    <section className="w-full h-[60vh] sm:h-[70vh] grid grid-cols-3 grid-rows-2 bg-gradient-to-b from-gray-100 to-white">
+    <section className="w-full h-[60vh] sm:h-[95vh] grid grid-cols-3 grid-rows-2 bg-gradient-to-b from-gray-100 to-white">
       {categories.map((category, index) => {
         if (category.type === "carousel") {
           return (
