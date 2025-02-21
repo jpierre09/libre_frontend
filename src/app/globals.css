@@ -3,6 +3,46 @@
 @tailwind utilities;
 
 :root {
+  --color-background: #F4E1C1; /* Vainilla */
+  --color-primary: #E07A5F; /* Terracota */
+  --color-secondary: #A68A64; /* Taupé */
+  --color-text: #171717; /* Negro */
+  --color-hover: #D1664E; /* Un tono más oscuro de terracota */
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0a0a0a;
+    --color-text: #ededed;
+  }
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+  @apply font-montserrat;
+}
+
+/* Botones y elementos interactivos */
+button {
+  @apply transition-all duration-300;
+}
+
+/* Para enlaces interactivos */
+a:hover {
+  color: var(--color-hover);
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
   --background: #ffffff;
   --foreground: #171717;
   --font-montserrat: "Montserrat", sans-serif; 
@@ -19,6 +59,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   /* font-family: Arial, Helvetica, sans-serif;
-   */
+   
    @apply font-montserrat;
-}
+} */

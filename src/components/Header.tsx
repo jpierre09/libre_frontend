@@ -24,11 +24,19 @@ export default function Header({ content }: HeaderProps) {
   }, []);
 
   return (
-    <header
-      className={`w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300 font-montserrat
-        ${isScrolled ? "bg-gray-900 bg-opacity-80" : "bg-gray-900 bg-opacity-30 backdrop-blur-lg"}
-      `}
-    >
+    // <header
+    //   className={`w-full fixed top-0 left-0 right-0 z-50 shadow-md transition-all duration-300 font-montserrat
+    //     ${isScrolled ? "bg-gray-900 bg-opacity-80" : "bg-gray-900 bg-opacity-30 backdrop-blur-lg"}
+    //   `}
+    // >
+
+<header
+  className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-montserrat
+    ${isScrolled ? "backdrop-blur-sm" : "backdrop-blur-lg"}
+  `}
+>
+
+
       {/* <div className="w-full px-4 sm:px-8 flex items-center justify-between py-2 sm:py-3 relative"> */}
       <div className="w-full px-4 sm:px-8 flex items-center justify-between py-4 sm:py-6 relative">
 
@@ -48,9 +56,17 @@ export default function Header({ content }: HeaderProps) {
         {/* <h1 className="absolute left-1/2 transform -translate-x-1/2 text-2xl sm:text-3xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
           <a href="/" className="uppercase">{logo}</a>
         </h1> */}
-        <h1 className="absolute left-1/2 transform -translate-x-1/2 text-3xl sm:text-4xl font-bold tracking-wide hover:scale-110 transition-all duration-300 cursor-pointer">
-          <a href="/" className="uppercase">{logo}</a>
-        </h1>
+<h1
+  className={`absolute left-1/2 transform -translate-x-1/2 text-3xl sm:text-4xl font-bold tracking-wide transition-all duration-300 cursor-pointer
+    ${isScrolled ? "text-gray-900" : "text-white"}
+    hover:scale-110 hover:tracking-widest hover:text-[#C4A484] hover:drop-shadow-lg
+  `}
+>
+  <a href="/" className="uppercase">{logo}</a>
+</h1>
+
+
+
 
 
         {/* Navegación derecha */}

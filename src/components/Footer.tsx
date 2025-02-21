@@ -35,7 +35,7 @@ export default function Footer({ content }: { content: string }) {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <Instagram className="w-7 h-7 text-neutral-300 hover:text-white transition" />
             </a>
-            <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://open.spotify.com/playlist/2hrbmrNOlC7q6eT222TRUl" target="_blank" rel="noopener noreferrer">
               <Music className="w-7 h-7 text-neutral-300 hover:text-white transition" />
             </a>
           </div>
